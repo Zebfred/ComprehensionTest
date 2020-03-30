@@ -1,5 +1,5 @@
 //NODE TEST
-console.log("working");
+console.log("working at last");
 
 
 //Write a function "min" that takes 2 arguements which should be numbers and returns to lowest of the two 
