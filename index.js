@@ -4,7 +4,9 @@ console.log("working");
 
 //Write a function "min" that takes 2 arguements which should be numbers and returns to lowest of the two 
 //Code Under this line
+function min(arg1,arg2){
 
+};
 
 
 
@@ -13,11 +15,35 @@ console.log("working");
 /*Write a function "range" which takes two arguments "start" and "end" that returns an array containing all of the 
 integers between and including start and end in sequential order */
 //code under this line 
+function range(start, end, step){
+    if (typeof stop == 'indefined')
+    stop = start;
+    start = 0;
 
+}
 
+if (typeof step == 'undefined'){
+    step = 1;
+}
 
-/*Write a function 'sum' which takes an Array of numbers as an  and argument and returns their sum
+if ((step > 0 && start >= stop)|| (step < 0 && start <= stop)){
+    return [];
+}
 
+var result = [];
+for (var i = start; step > 0 ? i < stop : i > stop; i += step){
+    result.push(i);
+}
+
+return result;
+
+};
+/*Write a function 'sum' which takes an Array of numbers as an  and argument and returns their sum*/
+
+function sum(arr1, arr2){
+    return arr1 + arr2;
+
+}
 
 
 /* Write a program that uses console.log to print all numbers from 1 to 100 with three exceptions for numbers divisble
@@ -26,8 +52,31 @@ number is divisble both by 5 and by 3 print "FIZZ BUZZ"
 
 For this problem consider researching the modulus operator */
 
+
+
+
 function fizzBuzz(){
-    //CODE HERE
+    for (var i = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0){
+            console.log('FizzBuzz');
+        }
+        
+        else if ( i % 3 == 0){
+            console.log('Fizz');
+    
+    
+        } 
+        
+        else if (i % 5 == 0) {
+            console.log('Buzz');
+        }
+     
+        
+        else {
+            console.log(i);
+        }
+            
+    }
 }
 
 /* You can get the Nth character (letter) from a string by writting the string variable name plus [N] e.g:
@@ -44,10 +93,19 @@ to count the number of.  */
 
 function countBs (string){
 //CODE HERE
+    for(int i = 0; i < string.length(); i++) {    
+        if(string.charAt(i) != ' ')    
+            count++; 
 }
+
+System.out.println("Total number of characters in a string: " + count); 
+
+}
+};
 
 function countChars (string, character){
 //CODE HERE
+for loop go though 7 times 
 }
 
 /* Write a loop that makes seven calls to console.log to output the following triangle:
@@ -91,8 +149,25 @@ __________________________________________
 once you have completed the program take in an arguement that varies the size of the grid */
 
 function chessBoard (gridSize){
-//CODE HERE
-}
+    var size = 8;
+    var result = "";
+    for(var i = 0; i < size; i++) {
+      for(var j = 0; j < size; j++) {
+        if(i !== 0 && j ===0){
+          result += "\n";
+        }
+        else if((j % 2 === 0 && i % 2 === 0) ||
+                (j % 2 === 1 && i % 2 === 1)){
+          result += " ";
+        }
+        else if((j % 2 === 0 && i % 2 === 1) || 
+                (j % 2 === 1 && i % 2 === 0)){
+          result += "#"; 
+        }
+      }
+    }
+    
+    console.log(result);
 
 
 
