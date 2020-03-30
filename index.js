@@ -4,20 +4,46 @@ console.log("working");
 
 //Write a function "min" that takes 2 arguements which should be numbers and returns to lowest of the two 
 //Code Under this line
-
-
-
-
-
+function min(a, b) {
+    return Math.min(a, b);
+}
+  console.log(min(15,25));
+  console.log(min(45,25));
 
 /*Write a function "range" which takes two arguments "start" and "end" that returns an array containing all of the 
 integers between and including start and end in sequential order */
 //code under this line 
+function range(start, end) {
+    if (start > end) {
+          var arr = new Array(start - end + 1);
+          for (var i = 0; i < arr.length; i++, start--) {
+              resarrult[i] = start;
+          }
+          return arr;
+      } 
+     else 
+     {
+          var arro = new Array(end-start+1);
+       
+      for (var j = 0; j < arro.length; j++, start++) 
+      {
+          arro[j] = start;
+      }
+            return arro;
+      }
+  }
+
+console.log(range(8, 16));
+console.log(range(-8, 16));
 
 
+/*Write a function 'sum' which takes an Array of numbers as an  and argument and returns their sum*/
 
-/*Write a function 'sum' which takes an Array of numbers as an  and argument and returns their sum
-
+let arr = [2,4,6,8,10];
+function sum(total, arr) {
+  return total + arr;
+}
+console.log(arr.reduce(sum));
 
 
 /* Write a program that uses console.log to print all numbers from 1 to 100 with three exceptions for numbers divisble
@@ -27,7 +53,28 @@ number is divisble both by 5 and by 3 print "FIZZ BUZZ"
 For this problem consider researching the modulus operator */
 
 function fizzBuzz(){
-    //CODE HERE
+    for ( var num = 1; num < 101; num ++ ) {
+  
+        // check if the number is divisible by 3 or 5
+        var checkForThree = num % 3;
+        var checkForFive = num % 5;
+        
+        // if the number is divisible by both 3 and 5, then print FizzBuzz
+        if ( (checkForThree == 0) && (checkForFive == 0) ) 
+            console.log( "FizzBuzz");
+        
+        // if the number is divisible by 3, then print Fizz
+        else if (checkForThree == 0)
+          console.log( "Fizz");
+        
+        // if the number is divisible by 5, then print Buzz
+        else if (checkForFive == 0)
+          console.log( "Buzz");
+        
+        // otherwise just print the number
+        else
+          console.log( num );
+      } 
 }
 
 /* You can get the Nth character (letter) from a string by writting the string variable name plus [N] e.g:
